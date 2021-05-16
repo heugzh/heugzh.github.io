@@ -6,7 +6,7 @@
   <link href="https://heugzh.github.io/atom.xml" rel="self"/>
   
   <link href="https://heugzh.github.io/"/>
-  <updated>2021-05-15T14:58:03.584Z</updated>
+  <updated>2021-05-16T07:59:14.799Z</updated>
   <id>https://heugzh.github.io/</id>
   
   <author>
@@ -17,42 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>newday</title>
-    <link href="https://heugzh.github.io/2021/05/15/newday/"/>
-    <id>https://heugzh.github.io/2021/05/15/newday/</id>
-    <published>2021-05-15T14:57:06.000Z</published>
-    <updated>2021-05-15T14:58:03.584Z</updated>
+    <title>hexo配置</title>
+    <link href="https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/"/>
+    <id>https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/</id>
+    <published>2021-05-16T06:32:21.000Z</published>
+    <updated>2021-05-16T07:59:14.799Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="这是新的一次尝试"><a href="#这是新的一次尝试" class="headerlink" title="这是新的一次尝试"></a>这是新的一次尝试</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;这是新的一次尝试&quot;&gt;&lt;a href=&quot;#这是新的一次尝试&quot; class=&quot;headerlink&quot; title=&quot;这是新的一次尝试&quot;&gt;&lt;/a&gt;这是新的一次尝试&lt;/h3&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://heugzh.github.io/2021/05/15/hello-world/"/>
-    <id>https://heugzh.github.io/2021/05/15/hello-world/</id>
-    <published>2021-05-15T04:00:58.658Z</published>
-    <updated>2021-05-15T04:00:58.658Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装所需环境"><a href="#安装所需环境" class="headerlink" title="安装所需环境"></a>安装所需环境</h1><p>首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。</p><h1 id="hexo主题配置"><a href="#hexo主题配置" class="headerlink" title="hexo主题配置"></a>hexo主题配置</h1><p>首先使用 npm 安装 hexo-cli 。</p><p><code> npm install hexo-cli -g</code></p><p>然后找一个空的文件夹 执行以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>然后访问localhost:4000, 就能看到默认的一个hexo主题。</p><h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>默认主题说实话，太丑了。得换。</p><p>可以在 <a href="https://hexo.io/themes/" target="_blank" rel="noopener"> hexo官网 </a>找一个好康的主题。</p><p>首先，下载主题。我使用的是indigo主题。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yscoder/hexo-theme-indigo.git</span><br></pre></td></tr></table></figure><p>然后把下载的文件夹放到<code>blog/themes</code>。</p><p>接下来，更新hexo 的版本。hexo v5也是大改过的版本。至少indigo主题不支持hexo v5。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update hexo@4.0.0</span><br></pre></td></tr></table></figure><p>安装 indigo所需依赖：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-less --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-json-content --save</span><br><span class="line">npm install hexo-helper-qrcode --save</span><br></pre></td></tr></table></figure><p>修改blog 下的<code>_config</code>文件，修改theme 为 hexo-theme-indigo。</p><p>执行以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>就可以在本地 localhost:4000 看到新的主题。</p><h1 id="谈谈问题"><a href="#谈谈问题" class="headerlink" title="谈谈问题"></a>谈谈问题</h1><p>版本匹配真的是一个坑，indigo主题只是说了使用hexo v3.0+ 和node v6.0+。然后下载的时候下载最新版本的hexo和node会直接g掉。</p><h2 id="node版本不匹配会遇到的问题"><a href="#node版本不匹配会遇到的问题" class="headerlink" title="node版本不匹配会遇到的问题"></a>node版本不匹配会遇到的问题</h2><p>node 版本如果是14以上的话，执行<code>hexo s</code>命令是没有问题的。<code>hexo g</code> 本来是应该将markdown文章解析之后放入public文件夹。事实是，public里面的<code>index.html</code> 是一个空白文件。<code> hexo s</code>能显示正常。但是当<code>hexo  d</code>(该命令用于部署到网上)，执行的时候是把public里面的文件给提交上去。</p><h2 id="hexo版本不匹配所遇到的问题"><a href="#hexo版本不匹配所遇到的问题" class="headerlink" title="hexo版本不匹配所遇到的问题"></a>hexo版本不匹配所遇到的问题</h2><p>由于hexo v5.0 将<code>lodash</code>从全局变量中移除。而indigo主题中使用了很多的这个全局变量， 所以<code> hexo g</code> 执行的时候会出现大量的 <code>_</code>未定义。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.</summary>
+    <summary type="html">&lt;h1 id=&quot;安装所需环境&quot;&gt;&lt;a href=&quot;#安装所需环境&quot; class=&quot;headerlink&quot; title=&quot;安装所需环境&quot;&gt;&lt;/a&gt;安装所需环境&lt;/h1&gt;&lt;p&gt;首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就</summary>
       
     
     
     
+    <category term="博客配置" scheme="https://heugzh.github.io/categories/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="hexo" scheme="https://heugzh.github.io/tags/hexo/"/>
     
   </entry>
   
