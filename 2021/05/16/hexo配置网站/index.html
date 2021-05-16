@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="深海的鲸的鱼塘">
 <meta property="og:description" content="安装所需环境首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。 hexo主题配置首先使用 npm 安装 hexo-cli 。  npm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-05-16T07:59:14.799Z">
+<meta property="og:updated_time" content="2021-05-16T08:16:18.744Z">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="深海的鲸的鱼塘" href="/atom.xml">
@@ -217,7 +217,7 @@
 <p>就可以在本地 localhost:4000 看到新的主题。</p>
 <h1 id="谈谈问题"><a href="#谈谈问题" class="headerlink" title="谈谈问题"></a>谈谈问题</h1><p>版本匹配真的是一个坑，indigo主题只是说了使用hexo v3.0+ 和node v6.0+。然后下载的时候下载最新版本的hexo和node会直接g掉。</p>
 <h2 id="node版本不匹配会遇到的问题"><a href="#node版本不匹配会遇到的问题" class="headerlink" title="node版本不匹配会遇到的问题"></a>node版本不匹配会遇到的问题</h2><p>node 版本如果是14以上的话，执行<code>hexo s</code>命令是没有问题的。<code>hexo g</code> 本来是应该将markdown文章解析之后放入public文件夹。事实是，public里面的<code>index.html</code> 是一个空白文件。<code> hexo s</code>能显示正常。但是当<code>hexo  d</code>(该命令用于部署到网上)，执行的时候是把public里面的文件给提交上去。</p>
-<h2 id="hexo版本不匹配所遇到的问题"><a href="#hexo版本不匹配所遇到的问题" class="headerlink" title="hexo版本不匹配所遇到的问题"></a>hexo版本不匹配所遇到的问题</h2><p>由于hexo v5.0 将<code>lodash</code>从全局变量中移除。而indigo主题中使用了很多的这个全局变量， 所以<code> hexo g</code> 执行的时候会出现大量的 <code>_</code>未定义。</p>
+<h2 id="hexo版本不匹配所遇到的问题"><a href="#hexo版本不匹配所遇到的问题" class="headerlink" title="hexo版本不匹配所遇到的问题"></a>hexo版本不匹配所遇到的问题</h2><p>由于hexo v5.0 将<code>lodash</code>从全局变量中移除。 所以<code> hexo g</code> 执行的时候会出现大量的 <code>_</code>未定义。</p>
 
         </div>
 
@@ -226,7 +226,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-05-16T07:59:14.799Z" itemprop="dateUpdated">2021-05-16 15:59:14</time>
+    最后更新时间：<time datetime="2021-05-16T08:16:18.744Z" itemprop="dateUpdated">2021-05-16 16:16:18</time>
 </span><br>
 
 
