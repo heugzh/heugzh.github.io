@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="hexo">
-    <meta name="description" content="安装所需环境首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。 hexo主题配置首先使用 npm 安装 hexo-cli 。  npm">
+    <meta name="description" content="这是一次测试项目">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo配置">
 <meta property="og:url" content="https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/index.html">
 <meta property="og:site_name" content="深海的鲸的鱼塘">
-<meta property="og:description" content="安装所需环境首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。 hexo主题配置首先使用 npm 安装 hexo-cli 。  npm">
+<meta property="og:description" content="这是一次测试项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-05-18T07:23:48.013Z">
+<meta property="og:updated_time" content="2021-06-28T09:11:08.219Z">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="深海的鲸的鱼塘" href="/atom.xml">
@@ -58,7 +58,7 @@
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">深海的鲸</h5>
-          <a href="mailto:2530884716@qq.com" target="_blank" rel="noopener" title="2530884716@qq.com" class="mail">2530884716@qq.com</a>
+          <a href="mailto:2530884716@qq.com" title="2530884716@qq.com" class="mail">2530884716@qq.com</a>
         </hgroup>
       </div>
     </div>
@@ -94,7 +94,14 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/heugzh/" target="_blank" rel="noopener"  >
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-about"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/heugzh/"  >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
@@ -115,7 +122,7 @@
     <main id="main">
         <header class="top-header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">hexo配置</div>
@@ -191,7 +198,11 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="安装所需环境"><a href="#安装所需环境" class="headerlink" title="安装所需环境"></a>安装所需环境</h1><p>首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。</p>
+            <div align="left"> <strong >重新布置博客主题</strong></div>
+
+<a id="more"></a>
+
+<h1 id="安装所需环境"><a href="#安装所需环境" class="headerlink" title="安装所需环境"></a>安装所需环境</h1><p>首先需要安装git以及node.js。直接去对应的官网下载就好。git版本无所谓，但是node.js的版本就很重要。大部分博客主题是基于node.js v14之前的写的（node v14似乎做了一次大改），所以如果版本不匹配，会发生一些问题（错误会在本篇最后具体描述）。所以最好安装node.js v14之前的版本。</p>
 <h1 id="hexo主题配置"><a href="#hexo主题配置" class="headerlink" title="hexo主题配置"></a>hexo主题配置</h1><p>首先使用 npm 安装 hexo-cli 。</p>
 <p><code> npm install hexo-cli -g</code></p>
 <p>然后找一个空的文件夹 执行以下命令</p>
@@ -199,7 +210,7 @@
 
 <p>然后访问localhost:4000, 就能看到默认的一个hexo主题。</p>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>默认主题说实话，太丑了。得换。</p>
-<p>可以在 <a href="https://hexo.io/themes/" target="_blank" rel="noopener"> hexo官网 </a>找一个好康的主题。</p>
+<p>可以在 <a href="https://hexo.io/themes/"> hexo官网 </a>找一个好康的主题。</p>
 <p>首先，下载主题。我使用的是indigo主题。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yscoder/hexo-theme-indigo.git</span><br></pre></td></tr></table></figure>
 
@@ -226,7 +237,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-05-18T07:23:48.013Z" itemprop="dateUpdated">2021-05-18 15:23:48</time>
+    最后更新时间：<time datetime="2021-06-28T09:11:08.219Z" itemprop="dateUpdated">2021-06-28 17:11:08</time>
 </span><br>
 
 
@@ -245,7 +256,7 @@
 
         
 <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+    <a id="rewardBtn" href="javascript:;" target="" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
 
@@ -267,12 +278,12 @@
         </a>
       </li>
       <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/&title=《hexo配置》 — 深海的鲸的鱼塘&source=技术积累" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/&title=《hexo配置》 — 深海的鲸的鱼塘&source= 重新布置博客主题" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -296,7 +307,7 @@
 
 
 
-    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
@@ -370,7 +381,7 @@
 </article>
 
 <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close" href="javascript:; "target=""><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         谢谢大爷~
@@ -416,7 +427,7 @@
             
                 <span><a href="/atom.xml"  class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -443,12 +454,12 @@
         </a>
       </li>
       <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/&title=《hexo配置》 — 深海的鲸的鱼塘&source=技术积累" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/&title=《hexo配置》 — 深海的鲸的鱼塘&source= 重新布置博客主题" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -472,7 +483,7 @@
 
 
 <div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <img src="//api.qrserver.com/v1/create-qr-code/?data=https://heugzh.github.io/2021/05/16/hexo%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99/" alt="微信分享二维码">
 </div>

@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="并查集">
-    <meta name="description" content="并查集 并查集主要用于解决一些元素分组的问题，它管理一系列的不相交的集合。并且支持两种操作：  合并（Union）：把两个集合合并成一个集合。 查询（Find）：查询两个元素是否在同一个集合。   实现代码初始化 123456int fa[MAXN];inline void init(int n)&amp;#123;    for(int i&#x3D;1;i&amp;lt;&#x3D;n;i++)&amp;#123;        fa[">
+    <meta name="description" content="并查集算法的基本概念">
 <meta name="keywords" content="并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="并查集">
 <meta property="og:url" content="https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.html">
 <meta property="og:site_name" content="深海的鲸的鱼塘">
-<meta property="og:description" content="并查集 并查集主要用于解决一些元素分组的问题，它管理一系列的不相交的集合。并且支持两种操作：  合并（Union）：把两个集合合并成一个集合。 查询（Find）：查询两个元素是否在同一个集合。   实现代码初始化 123456int fa[MAXN];inline void init(int n)&amp;#123;    for(int i&#x3D;1;i&amp;lt;&#x3D;n;i++)&amp;#123;        fa[">
+<meta property="og:description" content="并查集算法的基本概念">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-05-18T15:13:09.860Z">
+<meta property="og:updated_time" content="2021-06-28T09:12:28.610Z">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="深海的鲸的鱼塘" href="/atom.xml">
@@ -58,7 +58,7 @@
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">深海的鲸</h5>
-          <a href="mailto:2530884716@qq.com" target="_blank" rel="noopener" title="2530884716@qq.com" class="mail">2530884716@qq.com</a>
+          <a href="mailto:2530884716@qq.com" title="2530884716@qq.com" class="mail">2530884716@qq.com</a>
         </hgroup>
       </div>
     </div>
@@ -94,7 +94,14 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/heugzh/" target="_blank" rel="noopener"  >
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-about"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/heugzh/"  >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
@@ -115,7 +122,7 @@
     <main id="main">
         <header class="top-header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">并查集</div>
@@ -191,7 +198,11 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><blockquote>
+            <div align="left"> <strong >并查集算法的基本概念</strong></div>
+
+<a id="more"></a>
+
+<h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><blockquote>
 <p>并查集主要用于解决一些元素分组的问题，它管理一系列的<strong>不相交</strong>的集合。并且支持两种操作：</p>
 <ul>
 <li>合并（Union）：把两个集合合并成一个集合。</li>
@@ -223,7 +234,7 @@
 <p>所以有了一种新的优化策略，即按秩合并。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n ; i++)&#123;</span><br><span class="line">        fa[i] = i;</span><br><span class="line">        rank[i]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="built_in">find</span>(i),y=<span class="built_in">find</span>(j);</span><br><span class="line">    <span class="keyword">if</span>(rank[x] &lt;= rank[y] )</span><br><span class="line">        fa[x] = y;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        fa[y] = x;</span><br><span class="line">   <span class="keyword">if</span>(rank[x] == rank[y] &amp;&amp; x!=y )</span><br><span class="line">       rank[y]++; <span class="comment">// 深度相同，挂载后树的高度加一。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>当然懂了原理，还需要实践。可以去<a href="https://www.luogu.com.cn/" target="_blank" rel="noopener">落谷</a>或者<a href="https://leetcode-cn.com/" target="_blank" rel="noopener">leetcode</a>刷刷题。</p>
+<p>当然懂了原理，还需要实践。可以去<a href="https://www.luogu.com.cn/">落谷</a>或者<a href="https://leetcode-cn.com/">leetcode</a>刷刷题。</p>
 
         </div>
 
@@ -232,7 +243,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-05-18T15:13:09.860Z" itemprop="dateUpdated">2021-05-18 23:13:09</time>
+    最后更新时间：<time datetime="2021-06-28T09:12:28.610Z" itemprop="dateUpdated">2021-06-28 17:12:28</time>
 </span><br>
 
 
@@ -251,7 +262,7 @@
 
         
 <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+    <a id="rewardBtn" href="javascript:;" target="" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
 
@@ -273,12 +284,12 @@
         </a>
       </li>
       <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/&title=《并查集》 — 深海的鲸的鱼塘&source=技术积累" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/&title=《并查集》 — 深海的鲸的鱼塘&source= 并查集算法的基本概念" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -302,7 +313,7 @@
 
 
 
-    <a href="javascript:;" target="_blank" rel="noopener" id="shareFab" class="page-share-fab waves-effect waves-circle">
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
@@ -376,7 +387,7 @@
 </article>
 
 <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close" href="javascript:; "target=""><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         谢谢大爷~
@@ -422,7 +433,7 @@
             
                 <span><a href="/atom.xml"  class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -449,12 +460,12 @@
         </a>
       </li>
       <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/&title=《并查集》 — 深海的鲸的鱼塘&source=技术积累" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/&title=《并查集》 — 深海的鲸的鱼塘&source= 并查集算法的基本概念" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -478,7 +489,7 @@
 
 
 <div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <img src="//api.qrserver.com/v1/create-qr-code/?data=https://heugzh.github.io/2021/05/18/%E5%B9%B6%E6%9F%A5%E9%9B%86/" alt="微信分享二维码">
 </div>
